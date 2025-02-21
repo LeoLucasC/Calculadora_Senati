@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
     private var currentNumber = ""
     private var previousNumber = ""
     private var operator = ""
+    private var parenthesisCount = 0
     private lateinit var display: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         val button8: Button = findViewById(R.id.button_8)
         val button9: Button = findViewById(R.id.button_9)
         val button0: Button = findViewById(R.id.button_0)
+        val buttonDecimal: Button = findViewById(R.id.button_punto)
 
         // Botones de operaciones
         val buttonAdd: Button = findViewById(R.id.button_plus)
@@ -44,6 +46,26 @@ class MainActivity : AppCompatActivity() {
         val buttonRaiz: Button = findViewById(R.id.button_raiz)
         val buttonPotencia: Button = findViewById(R.id.button_potencia)
         val buttonFactorial: Button = findViewById(R.id.button_admiracion)
+        val buttonParenthesis: Button = findViewById(R.id.button_parenthesis)
+
+
+        val buttonPercent: Button = findViewById(R.id.button_percent)
+        buttonPercent.setOnClickListener {
+            if (currentNumber.isNotEmpty()) {
+                try {
+                    val result = currentNumber.toDouble() / 100
+                    currentNumber = result.toString()
+                    display.text = currentNumber
+                } catch (e: NumberFormatException) {
+                    display.text = "Error"
+                    currentNumber = ""
+                }
+            }
+        }
+
+
+
+
 
 
         val buttons = listOf(button1, button2, button3, button4, button5, button6, button7, button8, button9, button0)
@@ -61,6 +83,22 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        buttonDecimal.setOnClickListener {
+
+            if (!currentNumber.contains(".")) {
+                if (currentNumber.isEmpty()) {
+
+                    currentNumber = "0."
+                } else {
+
+                    currentNumber += "."
+                }
+                display.text = currentNumber
+            }
+        }
+
+
+
 
         buttonPi.setOnClickListener { appendPi() }
         buttonRaiz.setOnClickListener { calculateSquareRoot() }
@@ -74,13 +112,31 @@ class MainActivity : AppCompatActivity() {
 
         buttonEquals.setOnClickListener {
             if (previousNumber.isNotEmpty() && currentNumber.isNotEmpty() && operator.isNotEmpty()) {
-                val result = calculateResult(previousNumber.toDouble(), currentNumber.toDouble(), operator)
-                display.text = result
-                currentNumber = result
-                previousNumber = ""
-                operator = ""
+                try {
+                    val num1 = previousNumber.toDouble()
+                    val num2 = currentNumber.toDouble()
+                    val result = calculateResult(num1, num2, operator)
+
+
+                    display.text = result.toString()
+
+
+                    currentNumber = result.toString()
+                    previousNumber = ""
+                    operator = ""
+                } catch (e: Exception) {
+                    display.text = "Error"
+                    currentNumber = ""
+                    previousNumber = ""
+                    operator = ""
+                }
             }
         }
+
+
+
+
+
 
         buttonClear.setOnClickListener {
             currentNumber = ""
@@ -90,8 +146,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+
+
+
     private fun appendPi() {
-        currentNumber += Math.PI.toString().take(10) // Limit Pi to 10 digits
+        currentNumber += Math.PI.toString().take(10)
         display.text = currentNumber
     }
 
@@ -118,10 +178,14 @@ class MainActivity : AppCompatActivity() {
     private fun setOperator(op: String) {
         if (currentNumber.isNotEmpty()) {
             previousNumber = currentNumber
-            currentNumber = ""
             operator = op
+            currentNumber = ""
+            display.text = ""
         }
     }
+
+
+
 
     private fun calculateResult(num1: Double, num2: Double, op: String): String {
         val result = when (op) {
@@ -140,5 +204,9 @@ class MainActivity : AppCompatActivity() {
             result.toString()
         }
     }
+
+
+
+
 
 }
