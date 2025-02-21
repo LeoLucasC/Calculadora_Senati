@@ -11,8 +11,8 @@
 
     <TextView
         android:id="@+id/display"
-        android:layout_width="463dp"
-        android:layout_height="154dp"
+        android:layout_width="412dp"
+        android:layout_height="151dp"
         android:background="#424242"
         android:gravity="end|center_vertical"
         android:padding="16dp"
@@ -26,8 +26,8 @@
 
     <GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="394dp"
-        android:layout_height="539dp"
+        android:layout_width="390dp"
+        android:layout_height="553dp"
         android:layout_margin="8dp"
         android:background="#303030"
         android:columnCount="4"
@@ -42,34 +42,34 @@
 
         <Button
             android:id="@+id/button_raiz"
-            style="@style/FunctionButton"
+
             android:layout_height="wrap_content"
-            android:layout_margin="20p"
+            android:layout_margin="4dp"
             android:text="√"
             android:textSize="24sp" />
 
         <Button
             android:id="@+id/button_pi"
-            style="@style/FunctionButton"
+
             android:layout_height="wrap_content"
-            android:layout_margin="20p"
+            android:layout_margin="4dp"
             android:text="π"
             android:textSize="24sp" />
 
         <Button
             android:id="@+id/button_potencia"
-            style="@style/FunctionButton"
+
             android:layout_height="wrap_content"
-            android:layout_margin="20p"
+            android:layout_margin="4dp"
             android:text="^"
             android:textSize="24sp" />
 
 
         <Button
             android:id="@+id/button_admiracion"
-            style="@style/FunctionButton"
+
             android:layout_height="wrap_content"
-            android:layout_margin="20p"
+            android:layout_margin="4dp"
             android:text="!"
             android:textSize="24sp" />
 
@@ -78,15 +78,17 @@
 
         <Button
             android:id="@+id/button_ac"
-            style="@style/FunctionButton"
+
             android:layout_height="89dp"
             android:layout_margin="4dp"
             android:text="AC"
-            android:textSize="35sp" />
+            android:textSize="35sp"
+             />
+
 
         <Button
             android:id="@+id/button_parenthesis"
-            style="@style/FunctionButton"
+
             android:layout_height="90dp"
             android:layout_margin="4dp"
             android:text="( )"
@@ -94,7 +96,7 @@
 
         <Button
             android:id="@+id/button_percent"
-            style="@style/FunctionButton"
+
             android:layout_height="87dp"
             android:layout_margin="4dp"
             android:text="%"
@@ -102,8 +104,8 @@
 
 
         <Button
-            android:id="@+id/button_pi"
-            style="@style/FunctionButton"
+            android:id="@+id/button_division"
+
             android:layout_height="92dp"
             android:layout_margin="4dp"
             android:text="÷"
@@ -113,7 +115,7 @@
 
         <Button
             android:id="@+id/button_7"
-            style="@style/FunctionButton"
+
             android:layout_height="88dp"
             android:layout_margin="4dp"
             android:text="7"
@@ -121,15 +123,16 @@
 
         <Button
             android:id="@+id/button_8"
-            style="@style/FunctionButton"
+
             android:layout_height="91dp"
             android:layout_margin="4dp"
             android:text="8"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            />
 
         <Button
             android:id="@+id/button_9"
-            style="@style/FunctionButton"
+
             android:layout_height="89dp"
             android:layout_margin="4dp"
             android:text="9"
@@ -137,7 +140,7 @@
 
         <Button
             android:id="@+id/button_multiply"
-            style="@style/FunctionButton"
+
             android:layout_height="87dp"
             android:layout_margin="4dp"
             android:text="×"
@@ -147,7 +150,7 @@
         <!-- Fila 3 -->
         <Button
             android:id="@+id/button_4"
-            style="@style/FunctionButton"
+
             android:layout_height="87dp"
             android:layout_margin="4dp"
             android:text="4"
@@ -155,7 +158,7 @@
 
         <Button
             android:id="@+id/button_5"
-            style="@style/FunctionButton"
+
             android:layout_height="89dp"
             android:layout_margin="4dp"
             android:text="5"
@@ -163,7 +166,7 @@
 
         <Button
             android:id="@+id/button_6"
-            style="@style/FunctionButton"
+
             android:layout_height="85dp"
             android:layout_margin="4dp"
             android:text="6"
@@ -171,7 +174,7 @@
 
         <Button
             android:id="@+id/button_minus"
-            style="@style/FunctionButton"
+
             android:layout_height="90dp"
             android:layout_margin="4dp"
             android:text="−"
@@ -180,7 +183,7 @@
         <!-- Fila 4 -->
         <Button
             android:id="@+id/button_1"
-            style="@style/FunctionButton"
+
             android:layout_height="89dp"
             android:layout_margin="4dp"
             android:text="1"
@@ -188,7 +191,7 @@
 
         <Button
             android:id="@+id/button_2"
-            style="@style/FunctionButton"
+
             android:layout_height="84dp"
             android:layout_margin="4dp"
             android:text="2"
@@ -196,7 +199,7 @@
 
         <Button
             android:id="@+id/button_3"
-            style="@style/FunctionButton"
+
             android:layout_height="90dp"
             android:layout_margin="4dp"
             android:text="3"
@@ -204,7 +207,7 @@
 
         <Button
             android:id="@+id/button_plus"
-            style="@style/FunctionButton"
+
             android:layout_height="89dp"
             android:layout_margin="4dp"
             android:text="+"
@@ -214,7 +217,7 @@
         <!-- Fila 5 -->
         <Button
             android:id="@+id/button_0"
-            style="@style/FunctionButton"
+
             android:layout_height="89dp"
             android:layout_margin="4dp"
             android:text="0"
@@ -222,7 +225,7 @@
 
         <Button
             android:id="@+id/button_punto"
-            style="@style/FunctionButton"
+
             android:layout_height="84dp"
             android:layout_margin="4dp"
             android:text="."
@@ -230,7 +233,7 @@
 
         <Button
             android:id="@+id/button_borrar"
-            style="@style/FunctionButton"
+
             android:layout_height="90dp"
             android:layout_margin="4dp"
             android:text="C"
@@ -238,7 +241,7 @@
 
         <Button
             android:id="@+id/button_igual"
-            style="@style/FunctionButton"
+
             android:layout_height="89dp"
             android:layout_margin="4dp"
             android:text="="
