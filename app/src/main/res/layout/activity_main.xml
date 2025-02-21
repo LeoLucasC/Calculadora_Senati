@@ -11,8 +11,8 @@
 
     <TextView
         android:id="@+id/display"
-        android:layout_width="411dp"
-        android:layout_height="170dp"
+        android:layout_width="463dp"
+        android:layout_height="154dp"
         android:background="#424242"
         android:gravity="end|center_vertical"
         android:padding="16dp"
@@ -20,14 +20,14 @@
         android:textColor="#FFFFFF"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="395dp"
-        android:layout_height="516dp"
+        android:layout_width="394dp"
+        android:layout_height="539dp"
         android:layout_margin="8dp"
         android:background="#303030"
         android:columnCount="4"
@@ -37,6 +37,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/display"
         app:layout_constraintVertical_bias="1.0">
+
+        <!-- Fila pi -->
+
+        <Button
+            android:id="@+id/button_raiz"
+            style="@style/FunctionButton"
+            android:layout_height="wrap_content"
+            android:layout_margin="20p"
+            android:text="√"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_pi"
+            style="@style/FunctionButton"
+            android:layout_height="wrap_content"
+            android:layout_margin="20p"
+            android:text="π"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_potencia"
+            style="@style/FunctionButton"
+            android:layout_height="wrap_content"
+            android:layout_margin="20p"
+            android:text="^"
+            android:textSize="24sp" />
+
+
+        <Button
+            android:id="@+id/button_admiracion"
+            style="@style/FunctionButton"
+            android:layout_height="wrap_content"
+            android:layout_margin="20p"
+            android:text="!"
+            android:textSize="24sp" />
+
 
         <!-- Fila 1 -->
 
